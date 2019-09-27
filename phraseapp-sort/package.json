@@ -5,6 +5,6 @@
   "author": "CAR FOR YOU",
   "license": "MIT",
   "dependencies": {
-    "@carforyou/phraseapp": "^1.0.0"
+    "@carforyou/phraseapp": "^1.0.1"
   }
 }

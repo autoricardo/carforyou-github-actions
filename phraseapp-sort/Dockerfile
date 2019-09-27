@@ -1,8 +1,10 @@
 FROM node:10.16-alpine
 
+WORKDIR /action
+
 ADD package.json package-lock.json ./
 RUN npm ci --only=production
 
-ADD src/static/locales ./static/locales
+COPY ./static/locales static/locales
 
-ENTRYPOINT ["cfy-phraseapp", "sort"]
+ENTRYPOINT ["/action/node_modules/.bin/cfy-phraseapp", "sort", "--fix"]

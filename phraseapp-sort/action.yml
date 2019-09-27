@@ -4,5 +4,6 @@ author: CAR FOR YOU
 icon: box
 color: white
 
-using: docker
-image: Dockerfile
+runs:
+  using: docker
+  image: Dockerfile
