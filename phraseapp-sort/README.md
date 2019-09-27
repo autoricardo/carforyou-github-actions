@@ -1,20 +1,22 @@
 ## Usage
 ```
-name: Semantic Release
+name: Phraseapp sort
 
-on: pull_request
+on:
+  pull_request:
+    paths:
+      - static/locales/**/*
 
 jobs:
-  release:
+  sort:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@master
-        with:
-          fetch-depth: 1
 
       - name: sort
-        uses: autoricardo/github-actions/phraseapp-sort
+        id: sort
+        uses: autoricardo/carforyou-github-actions/phraseapp-sort@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -22,7 +24,7 @@ jobs:
         uses: github-actions-x/commit@v2.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          push-branch: ${{ GITHUB_REF }}
+          push-branch: ${{ github.head_ref }}
           commit-message: "Sort translations"
           force-add: "true"
 ```
