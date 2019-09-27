@@ -1,0 +1,8 @@
+name: CFY Phraseapp sort
+description: Sorts phraseapp keys
+author: CAR FOR YOU
+icon: box
+color: white
+
+using: docker
+image: Dockerfile

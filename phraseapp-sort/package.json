@@ -1,0 +1,10 @@
+{
+  "name": "@carforyou/release-action",
+  "version": "0.0.1",
+  "scripts": {},
+  "author": "CAR FOR YOU",
+  "license": "MIT",
+  "dependencies": {
+    "@carforyou/phraseapp": "^1.0.0"
+  }
+}
